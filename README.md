@@ -26,11 +26,21 @@ Githubからプロジェクトをclone
 	> Database has been created and is available
 	> Use `heroku addons:docs heroku-postgresql:dev` to view documentation
 
-環境変数DATABASE_URLでDB情報が取得できるよう変更(`YOURCOLOR`を置き換え)
+DB情報の環境変数キーを表示(`YOURCOLOR`を置き換え)
 
-    $ heroku config
-    > === sson-blog Config Vars
-    > HEROKU_POSTGRESQL_[YOURCOLOR]_URL: postgres://user_name:password@ec2-host.compute-1.amazonaws.com:5432/db_name
+    $ heroku pg
+    > === HEROKU_POSTGRESQL_[YOURCOLOR]_URL
+    > Plan:        Dev
+    > Status:      available
+    > Connections: 0
+    > PG Version:  9.1.6
+    > Created:     2013-01-20 08:07 UTC
+    > Data Size:   5.9 MB
+    > Tables:      0
+    > Rows:        0/10000 (In compliance)
+    > Fork/Follow: Unsupported
+
+    
 
 作成したDBをprimaryに設定
 
